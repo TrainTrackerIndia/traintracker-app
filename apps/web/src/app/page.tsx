@@ -1,3 +1,5 @@
+import { MapView } from "@/components/map/map-view";
+
 const navItems = [
   { label: "Explore", icon: "⌖", active: true },
   { label: "Search", icon: "⌕", active: false },
@@ -86,21 +88,7 @@ export default function Home() {
         </div>
 
         <div className="map-viewport">
-          <div className="map-grid" />
-
-          <div className="map-placeholder">
-            <strong>TrainTracker</strong>
-            <span>Map layer will be initialized here.</span>
-          </div>
-
-          <div className="map-controls">
-            <button className="map-control" aria-label="Zoom in">
-              +
-            </button>
-            <button className="map-control" aria-label="Zoom out">
-              −
-            </button>
-          </div>
+          <MapView />
         </div>
       </section>
     </main>
